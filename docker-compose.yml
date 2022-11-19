@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  dashy:
+    build:
+      args:
+        ALPINE_VERSION: "latest"
+        DASHY_VERSION: "2.1.1"
+      context: .
+      dockerfile: Containerfile
+      no_cache: true
+      tags:
+        - "alpine:dev"
+    image: "alpine:dev"
+    ports:
+      - "8080:4000"
+    volumes:
+      - "container:/mnt/volumes/container"
+      - "backup:/mnt/volumes/backup"
+        
+volumes:
+  container:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/mada/Workspace/dashy/container-volume
+  backup:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/mada/Workspace/dashy/backup-volume
+      

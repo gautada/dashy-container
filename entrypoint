@@ -1,0 +1,17 @@
+#!/bin/ash
+#
+# Launch the podman service/process if not previously launched. If parameters are not provided
+# launch as a process. If parameters provided fork the podman as a service.
+
+echo "$0"
+/usr/bin/pgrep node > /dev/null
+RTN=$?
+if [ $RTN -eq 1 ] ; then
+ log "-i" "entrypoint" "dashy(2.1.1)"
+ cd /opt/dashy
+ /usr/bin/yarn/yarn build
+ /usr/bin/yarn/yarn start
+fi
+
+
+
