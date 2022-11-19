@@ -51,7 +51,7 @@ WORKDIR /opt/dashy
 RUN yarn
 RUN yarn build
 RUN mv /opt/dashy/public/conf.yml  /opt/dashy/public/conf.yml~ \
- && /bin/ln -fsv /etc/container/conf.yml /opt/dashy/public/conf.yaml
+ && /bin/ln -fsv /etc/container/conf.yml /opt/dashy/public/conf.yml
 # ╭――――――――――――――――――――╮
 # │ PORTS              │
 # ╰――――――――――――――――――――╯
