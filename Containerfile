@@ -19,6 +19,8 @@ RUN apk add --no-cache git npm yarn
 RUN rm -v /etc/container/entrypoint
 COPY entrypoint /etc/container/entrypoint
 RUN mkdir -p /opt/dashy
+RUN /bin/ln -fsv /mnt/volumes/container/conf.yml /mnt/volumes/configmaps/conf.yml
+RUN /bin/ln -fsv /mnt/volumes/configmaps/conf.yml /etc/container/conf.yml
 
 # ╭――――――――――――――――――――╮
 # │ USER               │
@@ -49,8 +51,7 @@ WORKDIR /opt/dashy
 RUN yarn
 RUN yarn build
 RUN mv /opt/dashy/public/conf.yml  /opt/dashy/public/conf.yml~ \
- && ln -s /mnt/volumes/container/conf.yml /opt/dashy/public/conf.yml
-
+ && /bin/ln -fsv /etc/container/conf.yml /opt/dashy/public/conf.yaml
 # ╭――――――――――――――――――――╮
 # │ PORTS              │
 # ╰――――――――――――――――――――╯
