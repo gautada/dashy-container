@@ -9,8 +9,8 @@ services:
       dockerfile: Containerfile
       no_cache: true
       tags:
-        - "alpine:dev"
-    image: "alpine:dev"
+        - "dashy:dev"
+    image: "dashy:dev"
     ports:
       - "8080:4000"
     volumes:

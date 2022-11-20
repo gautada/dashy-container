@@ -16,16 +16,16 @@ steps:
 - name: publish
   environment:
     CONTAINER_NAME: "dashy"
-    DASHY_VERSION: "2.1.1"
+    CONTAINER_VERSION: "2.1.1"
     DOCKERIO_USERNAME:
       from_secret: username.docker.io
     DOCKERIO_PASSWORD:
       from_secret: password.docker.io
   commands:
-   - podman tag $CONTAINER_NAME:drone docker.io/$DOCKERIO_USERNAME/$CONTAINER_NAME:$ALPINE_VERSION
+   - podman tag $CONTAINER_NAME:drone docker.io/$DOCKERIO_USERNAME/$CONTAINER_NAME:$CONTAINER_VERSION
    - podman tag $CONTAINER_NAME:drone docker.io/$DOCKERIO_USERNAME/$CONTAINER_NAME:latest
    - podman login --username=$DOCKERIO_USERNAME --password=$DOCKERIO_PASSWORD docker.io
-   - podman push docker.io/$DOCKERIO_USERNAME/$CONTAINER_NAME:$ALPINE_VERSION
+   - podman push docker.io/$DOCKERIO_USERNAME/$CONTAINER_NAME:$CONTAINER_VERSION
    - podman push docker.io/$DOCKERIO_USERNAME/$CONTAINER_NAME:latest
 
 trigger:
