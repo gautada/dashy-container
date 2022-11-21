@@ -48,12 +48,12 @@ RUN git config --global advice.detachedHead false
 RUN git clone --branch $DASH_VERSION --depth 1 https://github.com/Lissy93/dashy.git /opt/dashy
  
 WORKDIR /opt/dashy
-RUN yarn
-RUN yarn build
+RUN yarn install --frozen-lockfile --network-timeout 1000000
+RUN yarn build --mode production
 RUN mv /opt/dashy/public/conf.yml  /opt/dashy/public/conf.yml~ \
  && /bin/ln -fsv /etc/container/conf.yml /opt/dashy/public/conf.yml
+ 
 # ╭――――――――――――――――――――╮
 # │ PORTS              │
 # ╰――――――――――――――――――――╯
-EXPOSE 8080
 EXPOSE 4000
