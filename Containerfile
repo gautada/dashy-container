@@ -17,7 +17,7 @@ LABEL description="This container is a a drone CI installation."
 # ╭――――――――――――――――――――╮
 # │ PACKAGES           │
 # ╰――――――――――――――――――――╯
-RUN apk add --no-cache git npm yarn
+RUN /sbin/apk add --no-cache git npm yarn
 
 # ╭――――――――――――――――――――╮
 # │ SOURCE             │
