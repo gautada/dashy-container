@@ -32,7 +32,7 @@ The dashy-container has no state and therefore does not need to be backed up.  N
 
 ### Context
 
-{![Context Diagram(Link to image)}
+{![Context Diagram](https://plantuml.com/plantuml/svg/dL9DJ-Cm4BtdLvW8QLEfJIyz8RGLcqPmA2mYAdkegigDHuc5OrlsP9UezBypwISK2jBculbwps-USoPrhce1x38Pz9D1REjA_GpEtbVdYT48p_X5bqiDxcI_iaQ3FeKVDPfNCZ_L1QjCKntWmG-srKDHR_DHjCJ6miKqQpn2zPBIWBDEUfZDLxzChGLtJSILvBxB55-0whBbi8Mikco8lA3okPBwgKDKz-2yqSjv-eoh8ynGWCyTdPx84JvYD_V_3tQxrzh9msRhtVRrOqQ4lDJVgoAAQJ9WzufhdDoEPr69QFr5ls_R2hdQyoYKNCI5nB9UnDAGyxtTU9-qeKG5BDmQpqQI5uvNhCSoesgKHeT1iB4j2ciFBkooSDAUdM3ZI1GAxikchOyeM1ZkH9k8NH8Nd8Ze9pAkU8FYrYgPy_KLD7xrFfsMnkFiKsZx0b584lxA7DhPx13MJj7oBJOMfY9dOrI2aC43g8F-lU172V-e-tap5H9tpNtnIFMOdk6xcGmvrfub9UGVPz-iiUKAiflVV-RZz3gz6qMTLm00)
 
 ### Container
 
@@ -46,15 +46,7 @@ The dashy-container has no state and therefore does not need to be backed up.  N
 
 ### Checklist
 
-- [x] README conforms to the [gist](https://gist.github.com/gautada/ec549c846e8e50daf355d01b06eb0665)
-- [x] .gitignore conforms to the [gist](https://gist.github.com/gautada/3a0a4a76d3c7e4539e71fc02c7f599ad)
-- [x] Confirm the drone.yml file
-- [x] Volume folders are present (development-volume & backup-volume)
-- [x] docker-compose(.yml) works
-- [x] Manifst folder present (and origin to private repository is correct
-- [x] Issue List is linked to proper URI
-- [ ] Signoff ({date and signature of last check})
-- [x] Confirm backup (maybe add to testing layer)
+- [2022-11-28](https://github.com/gautada/dashy-container/issues/6)
 - [ ] Confirm healthcheck (maybe add to testing layer)
 - [ ] Regenerate all architecture images
 
@@ -64,6 +56,8 @@ The dashy-container has no state and therefore does not need to be backed up.  N
 The official to list is kept in a [GitHub Issue List]{(https://github.com/gautada/dashy-container/issues)}
 
 ## Notes
+
+- [Error with the dev build](https://github.com/gautada/dashy-container/issues/5) - Was not able to upgrade to 3.17.0.
 
 
 
