@@ -58,6 +58,7 @@ The official to list is kept in a [GitHub Issue List]{(https://github.com/gautad
 ## Notes
 
 - [Error with the dev build](https://github.com/gautada/dashy-container/issues/5) - Was not able to upgrade to 3.17.0.
+- Build from source is base on the the [Dockerfile](https://github.com/Lissy93/dashy/blob/master/Dockerfile) in the project's repo.
 
 
 
